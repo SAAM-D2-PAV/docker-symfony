@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: symfonydockerpwd
+      MYSQL_DATABASE: symfony-docker-db
+      MYSQL_PASSWORD: symfonydockerpwd
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3406:3306"
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    volumes:
+      - type: volume
+        source: tls
+        target: /root/.symfony5/certs
+      - type: bind
+        source: ./app
+        target: /app
+      - type: volume
+        target: /app/vendor
+    ports:
+      - 8000:8000
+
+volumes:
+  mysql_data:
+    driver: local
+  tls:
+
