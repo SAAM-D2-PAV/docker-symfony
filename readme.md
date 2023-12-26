@@ -20,6 +20,7 @@ version 7.0.* - https://symfony.com/doc/current/index.html
 
 ```console
 # docker exec -it NOM_CONTENEUR_PHP bash
+# docker exec -it php-from-scratch-php-1 sh
 # symfony console doctrine:database:create
 # symfony console doctrine:migration:migrate
 ``````
