@@ -19,8 +19,9 @@ version 7.0.* - https://symfony.com/doc/current/index.html
 #### Création de la base de données locale
 
 ```console
-# docker exec -it NOM_CONTENEUR_PHP bash
+# docker exec -it NOM_CONTENEUR_PHP sh
 # docker exec -it php-from-scratch-php-1 sh
+# mysql -p
 # symfony console doctrine:database:create
 # symfony console doctrine:migration:migrate
 ``````
