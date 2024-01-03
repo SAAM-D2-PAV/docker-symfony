@@ -39,3 +39,11 @@ version 7.0.* - https://symfony.com/doc/current/index.html
 
 ### Fonctionnement du framwork 
 ![Kernel Symfony](./doc/Kernel%20Synfony.png "Kernel Symfony")
+
+
+### Debug
+```console
+    dans le container php 
+    cd /app
+    symfony console
+``````
