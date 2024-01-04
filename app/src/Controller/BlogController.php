@@ -15,4 +15,10 @@ class BlogController extends AbstractController
             'controller_name' => 'BlogController',
         ]);
     }
+
+    #[Route('/api', name: 'api')]
+    public function api(): Response
+    {
+        return $this->json('Coucou');
+    }
 }
