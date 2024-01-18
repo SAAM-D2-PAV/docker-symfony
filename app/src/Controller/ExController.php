@@ -8,9 +8,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
-class BlogController extends AbstractController
+class ExController extends AbstractController
 {
-    #[Route('/blog', name: 'app_blog')]
+    #[Route('/ex', name: 'app_ex')]
     public function index(): Response
     {
         return $this->render('blog/index.html.twig', [
