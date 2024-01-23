@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}sample!
+{% endblock %}
+
+{% block body %}
+
+	{% block stylesheets %}
+		{{ parent() }}
+		{{ encore_entry_link_tags('app') }}
+	{% endblock %}
+
+	{% block javascripts %}
+		{{ parent() }}
+		{{ encore_entry_script_tags('app') }}
+	{% endblock %}
+
+{% endblock %}
