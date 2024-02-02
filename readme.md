@@ -15,6 +15,7 @@ version 7.0.* - https://symfony.com/doc/current/index.html
 # composer install
 # npm / yarn install 
 # docker compose -f docker-compose.dev.yml up
+docker compose -f docker-compose.dev.yml down
 ``````
 
 ### Connection aux containeurs

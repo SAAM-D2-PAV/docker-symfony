@@ -27,8 +27,10 @@ class ExController extends AbstractController
         $from = $this->createFormBuilder()
             // ::class permet de résoudre le nom d'une classe.
             // NomDeClasse::class nous récupérons le nom complet de la classe avec le namespace utilisé
-            ->add('content', TextType::class)
-            ->add('submit', SubmitType::class)
+            ->add('content', TextType::class, [
+                'attr' => ['class' => 'maClasse']
+            ])
+            ->add('submit', SubmitType::class, [])
             ->getForm();
 
         return $this->render('samples/form.html.twig', [
