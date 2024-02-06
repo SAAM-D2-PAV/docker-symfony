@@ -1,6 +1,6 @@
 # Dockerisation d'une application Symfony
 version 7.0.* - https://symfony.com/doc/current/index.html
-> déc. 2023
+> fév. 2023
 
 | services  |  version | link  |   |   |
 |---|---|---|---|---|
@@ -15,7 +15,7 @@ version 7.0.* - https://symfony.com/doc/current/index.html
 # composer install
 # npm / yarn install 
 # docker compose -f docker-compose.dev.yml up
-docker compose -f docker-compose.dev.yml down
+# docker compose -f docker-compose.dev.yml down
 ``````
 
 ### Connection aux containeurs
@@ -38,7 +38,7 @@ docker compose -f docker-compose.dev.yml down
 ```symfony console doctrine:migration:migrate```
 
 
-### Fonctionnement du framwork 
+### Fonctionnement du framework 
 ![Kernel Symfony](./doc/Kernel%20Synfony.png "Kernel Symfony")
 
 
@@ -47,4 +47,21 @@ docker compose -f docker-compose.dev.yml down
     dans le container php 
     cd /app
     symfony console
+    symfony console debug:twig
 ``````
+
+
+### Makefile
+
+```console
+touch Makefile
+xcode-select --install 
+``````
+
+# PHP Doc
+
+https://phpqa.io/
+
+https://frankenphp.dev/docs/docker/
+
+https://phpmetrics.org/
